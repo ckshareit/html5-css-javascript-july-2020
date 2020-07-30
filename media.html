@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Media</title>
+</head>
+<body>
+    <h1>HTML5 Media</h1>
+    <button onclick="playclicked()">Play</button>
+    &nbsp;
+    <button onclick="pauseclicked()">Pause</button>
+    &nbsp;
+    <button onclick="forwardonceten()">Forward Once 10 Sec</button>
+    <br>
+    <video controls muted loop poster="./images/1.jpg" id="myvideo" >
+        <source src="./video/640_360.mp4">
+        <source src="./video/640_800kB.mov"> 
+    </video>
+
+    <audio controls loop  muted>
+        <source src="./audio/MP3_1MG.mp3">
+    </audio>
+<br>
+    HTML5 Media API!
+    <ol>
+        <li>Play/Pause media</li>
+        <li>Check status of playback</li>
+        <li>Set playback time</li>
+        <li>Create completely custom media player!!!!</li>
+
+    </ol>
+<script>
+
+    myvideoref = document.getElementById('myvideo')
+
+
+
+    function playclicked(){
+        console.log(myvideoref)
+        console.log('Play Clicked!')
+        console.log(myvideoref.currentTime)
+        myvideoref.play()
+    }
+
+    function pauseclicked(){
+        console.log('Pause Clicked!')
+        console.log(myvideoref.currentTime)
+        myvideoref.pause()
+    }
+
+    function forwardonceten(){
+        console.log('Forward Once -> 10 sec')
+        console.log('Old currentTime: ' + myvideoref.currentTime)
+        myvideoref.currentTime += 10
+        console.log('New currentTime: ' + myvideoref.currentTime)
+    }
+
+
+</script>
+</body>
+</html>
+
