@@ -22,7 +22,7 @@ p, a {
 }
 
 .wrapper:after{
-    content: "";
+    content: "something";
     clear: both;
     display: block;
 
