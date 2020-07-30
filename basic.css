@@ -48,9 +48,46 @@ img{
 .boxblue{
     background: blue;
     float: left;
+   
 }
 
 .box{
     height: 200px;
     width: 200px;
+}
+
+.description h2, .description p{
+    color: purple;
+    text-align: center;
+}
+
+.description{
+    float: left;
+    border: 1px dotted lightpink;
+    width: 29%;
+    background: lightsalmon;
+    margin:1%;
+    padding: 1%;
+    height: 200px;
+
+} 
+
+section, aside{
+    float: left;
+    width: 46%;
+    background: lightsteelblue;
+    margin:1%;
+    padding: 1%;
+}
+
+.columns:after{
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.content p{
+    column-count: 4;
+    column-gap: 50px;
+    column-rule: 1px dotted black;
 }
