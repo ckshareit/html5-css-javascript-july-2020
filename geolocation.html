@@ -7,7 +7,7 @@
 </head>
 <body>
     <h3>Geolocation</h3>
-    <button onclick="getLocation()">Get current location</button>
+    <button onclick="getLocation(event)">Get current location</button>
     <div>
         <span >
             Latitude:
@@ -27,7 +27,8 @@
         lngref = document.getElementById("lngid")
 
 
-        function getLocation(){
+        function getLocation(e){
+            console.log(e)
             if(navigator.geolocation){
                    navigator.geolocation.getCurrentPosition(function(location){
                        console.log(location)

@@ -1,0 +1,35 @@
+body{
+    color: red;
+}
+
+.title{
+    font-size: 6rem;
+    color: blue
+}
+
+
+.paragraph{
+    font-size: 2rem;
+}
+
+@media (max-width: 500px){
+    .title{
+        color:green;
+        font-size: 3rem;
+    }
+}
+
+@media (orientation: landscape) and (max-width:500px){
+        .paragraph{
+        font-size: 2rem;
+        color: lavender
+    }
+}
+
+
+@media (orientation: portrait){
+    .paragraph{
+    font-size: 2rem;
+    color: purple;
+}
+}
