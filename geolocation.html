@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Geolocation</h3>
+    <button onclick="getLocation()">Get current location</button>
+    <div>
+        <span >
+            Latitude:
+        </span>
+        <span id="latid">Latitude Value</span>
+        <br>
+        <span >
+            Longitude:
+        </span>
+        <span id="lngid">Longitude Value</span>
+    </div>
+
+
+    <script>
+
+        latref = document.getElementById("latid")
+        lngref = document.getElementById("lngid")
+
+
+        function getLocation(){
+            if(navigator.geolocation){
+                   navigator.geolocation.getCurrentPosition(function(location){
+                       console.log(location)
+                       latref.innerText =  location.coords.latitude
+                       lngref.innerText =  location.coords.longitude
+                   }, function(error){
+                        console.log(error)
+                   }) 
+
+            }
+
+        }
+
+ 
+
+    </script>
+
+</body>
+</html>
